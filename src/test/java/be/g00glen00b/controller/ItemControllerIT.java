@@ -1,8 +1,11 @@
 package be.g00glen00b.controller;
 
-import static com.jayway.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
-
+import be.g00glen00b.Application;
+import be.g00glen00b.builders.ItemBuilder;
+import be.g00glen00b.model.Item;
+import be.g00glen00b.repository.ItemRepository;
+import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.junit.*;
 import org.junit.runner.RunWith;
@@ -11,13 +14,8 @@ import org.springframework.boot.test.*;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import be.g00glen00b.Application;
-import be.g00glen00b.builders.ItemBuilder;
-import be.g00glen00b.model.Item;
-import be.g00glen00b.repository.ItemRepository;
-
-import com.jayway.restassured.RestAssured;
-import com.jayway.restassured.http.ContentType;
+import static com.jayway.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
